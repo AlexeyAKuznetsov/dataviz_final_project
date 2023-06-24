@@ -1,8 +1,8 @@
 # Data Visualization and Reproducible Research
 
-> Firstname Lastname. 
+> Alexey Kuznetsov. 
 
-Learn more about me in my [GitHub profile page](https://github.com/reiminer). 
+Learn more about me in my [GitHub profile page](https://github.com/AlexeyAKuznetsov). 
 
 
 The following is a sample of products created during the _"Data Visualization and Reproducible Research"_ course.
@@ -10,36 +10,31 @@ The following is a sample of products created during the _"Data Visualization an
 
 ## Project 01
 
-In the `project_01/` folder you can find... _[add short description of your revised project here]_
+Under /project-01 The WorldCupMatches.csv dataset, which contains thorough records of football games from several World Cup competitions, was the subject of my exploratory data research. My main goal was to condense the data and produce visualizations that would highlight intriguing trends or patterns.
 
 **Sample data visualization:** 
 
-_[include your favorite visualization from this project here]_
 <img src="https://github.com/reisanar/figs/raw/master/echarts.png" width="70%" height="70%">
 
 
 ## Project 02
 
-In this project, I explored ... _[short description of your revised project goes here]_ Find the code and report in the `project_02/` folder.
+Under /project-02 I examine the Social Security Administration’s examination of infant names. From 1880 through 2020, all names with at least 5 occurrences in a single year are included in the dataset.
 
 **Sample data visualization:** 
 
-_[include your favorite visualization from this project here]_
 <img src="https://raw.githubusercontent.com/reisanar/dataviz_final_project/main/figures/fl_higher_ed.png" width="80%" height="80%">
-
-(you can place your figures in the `figures/` folder and use the `![](path_to_picture)` option to add the pictures here)
 
 
 ## Project 03
 
-In this project, I explored ... _[short description of the data visualizations you for this part of the project produced goes here]_
+Under /project-03 I examine the the data provided by the Tampa International Airport to recreate graphs that were based on the 2016 but now with the 2022 dataset. 
 
 **Sample data visualization:** 
 
-_[include your favorite visualization from this project here]_
 <img src="https://github.com/reisanar/figs/raw/master/concrete_density.png" width="80%" height="80%">
 
 
 ### Moving Forward
 
-_Please add here a short reflection on what you learned and what you plan to continue exploring in terms of data visualization, data storytelling, reproducible research, and/or related topics._
+There is still a lot to learn as the samples provided above are not perfect. There is always a way to tell a data story differently and so that it can be understood by more than just me. Reproducing and/or creating visualizations based on other that I see will be a big topic of research in the future. 

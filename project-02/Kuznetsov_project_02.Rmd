@@ -1,0 +1,80 @@
+---
+title: "Data Visualization Mini Project 2"
+author: "Alexey Kuznetsov - `akuznetsov7301@floridapoly.edu`"
+output:
+  html_document:
+    keep_md: true
+    df_print: paged
+---
+
+```{r warning=FALSE, message=FALSE}
+setwd("C:/Users/alexe/OneDrive/Desktop/dataviz_final_project")
+
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(htmlwidgets)
+library(scales) 
+
+babynames <- read_rds("./data/babynames.rds")
+
+names_summary <- babynames %>%
+  group_by(name) %>%
+  summarize(total_births = sum(n) / 1e6, .groups = 'drop')
+
+top_20_names <- names_summary %>%
+  arrange(desc(total_births)) %>%
+  head(20)
+```
+
+```{r warning=FALSE, message=FALSE}
+setwd("C:/Users/alexe/OneDrive/Desktop/dataviz_final_project/project-02")
+# Visualization 1: An interactive plot
+interactive_plot <- plot_ly(top_20_names, x = ~name, y = ~total_births, type = "bar") %>% 
+  layout(title = "Total births for top 20 names (in millions)",
+         yaxis = list(title = "Total births (in millions)"))
+saveWidget(interactive_plot, "interactive_plot.html")
+
+print(interactive_plot)
+```
+
+```{r warning=FALSE, message=FALSE}
+setwd("C:/Users/alexe/OneDrive/Desktop/dataviz_final_project/project-02")
+# Visualization 2: A line plot of total births over time for the top name
+top_name <- babynames %>%
+  group_by(name) %>%
+  summarize(total_births = sum(n) / 1e6, .groups = 'drop') %>%
+  arrange(desc(total_births)) %>%
+  slice(1) %>%
+  pull(name)
+
+top_name_data <- babynames %>%
+  filter(name == top_name)
+
+top_name_data$total_births_millions <- top_name_data$n / 1e6
+
+ggplot(top_name_data, aes(x = year, y = total_births_millions)) +
+  geom_line(color = "steelblue") +
+  theme_minimal() +
+  labs(title = paste("Total births over time for the name", top_name, "(in millions)"), x = "Year", y = "Total births (in millions)")
+
+ggsave("line_plot.png")
+```
+
+```{r warning=FALSE, message=FALSE}
+setwd("C:/Users/alexe/OneDrive/Desktop/dataviz_final_project/project-02")
+# Visualization 3: A boxplot of total births across genders for the top 20 names
+top_20_names_gender <- babynames %>%
+  filter(name %in% top_20_names$name) %>%
+  group_by(name, sex) %>%
+  summarize(total_births = sum(n) / 1e6, .groups = 'drop')
+
+ggplot(top_20_names_gender, aes(x = sex, y = total_births, fill = sex)) +
+  geom_boxplot() +
+  theme_minimal() +
+  labs(title = "Distribution of total births across genders for top 20 names (in millions)", x = "Gender", y = "Total births (in millions)") +
+  scale_fill_manual(values = c("steelblue", "pink"))
+
+ggsave("boxplot.png")
+```
