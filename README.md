@@ -23,7 +23,7 @@ Under /project-02 I examine the Social Security Administration’s examination o
 
 **Sample data visualization:** 
 
-<img src="https://raw.githubusercontent.com/reisanar/dataviz_final_project/main/figures/fl_higher_ed.png" width="80%" height="80%">
+<img src="https://raw.githubusercontent.com/AlexeyAKuznetsov/dataviz_final_project/main/figures/boxplot.png" width="80%" height="80%">
 
 
 ## Project 03
