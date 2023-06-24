@@ -14,7 +14,7 @@ Under /project-01 The WorldCupMatches.csv dataset, which contains thorough recor
 
 **Sample data visualization:** 
 
-<img src="https://github.com/reisanar/figs/raw/master/echarts.png" width="70%" height="70%">
+<img src="https://raw.githubusercontent.com/AlexeyAKuznetsov/dataviz_final_project/main/figures/matchesbyteam.png" width="80%" height="80%">
 
 
 ## Project 02
@@ -32,7 +32,7 @@ Under /project-03 I examine the the data provided by the Tampa International Air
 
 **Sample data visualization:** 
 
-<img src="https://github.com/reisanar/figs/raw/master/concrete_density.png" width="80%" height="80%">
+<img src="https://raw.githubusercontent.com/AlexeyAKuznetsov/dataviz_final_project/main/figures/part-a.png" width="80%" height="80%">
 
 
 ### Moving Forward
